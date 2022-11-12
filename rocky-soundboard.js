@@ -1,18 +1,14 @@
-const screenW = 1000;
-let screenH;
+const screenW = 400;
+let screenH; // Computed based on # of buttons'
 
-let soundSampleArray;
-let sounds; // loaded sound files mapped from soundSamples
-let buttons; // 
+const margin = 5;
+const buttonWidth = screenW - margin * 2;
 
-const samplePath = "assets/";
-const sampleData0 = { file: "what-do-you-mean", label: "What do you mean? 🤨" };
+let soundSampleArray; // array of data loaded from JSON
+let sounds; // array of loaded sound files mapped from soundSampleArray
+let buttons; // array of buttons mapped from soundSampleArray
 
-// touch gui
 let gui;
-// let button;
-
-var  myButton;
 
 function preload() {
 // Asynchronous loading happens here
@@ -39,23 +35,20 @@ function preload() {
 
 function setup() {
 
-    let cnv =createCanvas(400, 800);
-    // cnv.mousePressed(()=> { sound0.play()} );
-    background(220);
+    screenH = 1000; // TODO: computed based on # of buttons
 
-    // soundSamples.forEach( (sample, index) => {
-    //     const button = createButton(sample.label, 5, 5 + index *50, 200, 45);
-    //     const sound = sounds[index];
-    //     button.onPress = () => { sound.play() }
-    // })
-
+    createCanvas(screenW, screenH); // side effecty
     gui = createGui();
 
-    // button = createButton("Button button", 50, 50, 200, 200);
-    // button.onPress = () => {
-    //     console.log("button pressed");
-    //     sound0.play()
-    // }
+    soundSampleArray.forEach( (sample, index) => {
+        const button = createButton(
+            sample.label,
+            5, 5 + index * 50,
+            buttonWidth, 45);
+            // side effecty, gui holds a button reference
+        const sound = sounds[index];
+        button.onPress = () => { sound.play() }
+    });
 }
 
 function draw() {
