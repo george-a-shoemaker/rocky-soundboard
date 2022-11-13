@@ -1,5 +1,24 @@
 [
     {"file": "what-do-you-mean", "label": "Whatchu mean? 🤨"},
-    {"file": "what-do-you-mean", "label": "Whatchu mean? 🤨"},
-    {"file": "what-do-you-mean", "label": "Whatchu mean? 🤨"}
+    {"file": "go-to-bed",        "label": "Go to bed 🥱 Beddy boo! 😴"},
+    {"file": "bikes",            "label": "Bikes! 🤩 Bike x5 🚲"},
+    {"file": "you-can-do-it",    "label": "You can do it 💪"},
+    {"file": "anywho-how-was-the-day",  "label": "AnywhOoo 🎵 How was the day?"},
+    {"file": "oh-yah-not-leaving",      "label": "The Saga of Rocky Leaving 👋"},
+    {"file": "ok-thanks-for-hosting",   "label": "A fond farewell 🤬"},
+    {"file": "just-angry-out-here",     "label": "Taking shit personally 😠"},
+    {"file": "rootin-tootin-despedida", "label": "Rootin'n tootin'n despedida! 🤠"},
+    {"file": "woah-two",                "label": "2 = 😱, 4 = 😎"},
+    {"file": "woohoo",                  "label": "Whoohoo! 🙌"},
+    {"file": "get-my-balls-pumped",     "label": "I get my ⚽️🏐 pumped everywhere"},
+    {"file": "full-moon",               "label": "Full moon tonight 🌝 Awooo!"},
+    {"file": "it-was-cool",             "label": "It was cooool 💅"},
+    {"file": "robozinho",               "label": "🇧🇷 Robozinho! 🤖🥹"},
+    {"file": "tastes-like-chalk",       "label": "Rocky loves matcha 💚🍵"}
+
+
+
+
+
+
 ]
