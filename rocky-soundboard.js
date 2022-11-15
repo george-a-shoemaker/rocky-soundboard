@@ -1,8 +1,9 @@
-const screenW = 400;
+const screenW = 600;
 let screenH; // Computed based on # of buttons'
 
-const margin = 5;
+const margin = 10;
 const buttonWidth = screenW - margin * 2;
+const buttonHeight = 60; // includes the margin
 
 let soundSampleArray; // array of data loaded from JSON
 let sounds; // array of loaded sound files mapped from soundSampleArray
@@ -35,16 +36,22 @@ function preload() {
 
 function setup() {
 
-    screenH = 1000; // TODO: computed based on # of buttons
+    screenH = margin + sounds.length * buttonHeight;
+    console.log(screenH) // TODO: computed based on # of buttons
 
-    createCanvas(screenW, screenH); // side effecty
+    const canvas = createCanvas(screenW, screenH); // side effecty
+    canvas.parent('sketch-holder');
+    canvas.style("display", "block");
+
+
     gui = createGui();
+    gui.loadStyle("Rose");
 
     soundSampleArray.forEach( (sample, index) => {
         const button = createButton(
             sample.label,
-            5, 5 + index * 50,
-            buttonWidth, 45);
+            margin, margin + index * buttonHeight,
+            buttonWidth, buttonHeight - margin);
             // side effecty, gui holds a button reference
         const sound = sounds[index];
         button.onPress = () => { sound.play() }
